@@ -2,9 +2,6 @@ version: "3"
 
 silent: true
 
-includes:
-  docker: ./docker.yml
-
 tasks:
   clean:
     desc: "Clean up project files"
