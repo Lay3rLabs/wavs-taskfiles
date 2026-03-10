@@ -23,10 +23,10 @@ vars:
 
   LOAD_ENV_AND_KEYS: |
     source {{.WAVS_ENV_FILE}}
-    OPERATOR_KEY=$(cast wallet private-key --mnemonic "$WAVS_SUBMISSION_MNEMONIC" --mnemonic-index 0)
+    OPERATOR_KEY=$(cast wallet private-key --mnemonic "$WAVS_SIGNING_MNEMONIC" --mnemonic-index 0)
     OPERATOR_ADDRESS=$(cast wallet address ${OPERATOR_KEY})
-    OPERATOR_MNEMONIC="$WAVS_SUBMISSION_MNEMONIC"
-    WAVS_SIGNING_KEY=$(cast wallet address --mnemonic "$WAVS_SUBMISSION_MNEMONIC" --mnemonic-index 1)
+    OPERATOR_MNEMONIC="$WAVS_SIGNING_MNEMONIC"
+    WAVS_SIGNING_KEY=$(cast wallet address --mnemonic "$WAVS_SIGNING_MNEMONIC" --mnemonic-index 1)
 
 tasks:
   register:
